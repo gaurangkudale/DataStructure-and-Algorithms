@@ -60,15 +60,48 @@ public class Main {
     }
 
     //11. Write a Java program to reverse an array of integer values.
+    
+    public static void reverse(int arr[]){
+            for( int j = arr.length-1; j >= 0; j--){
+                System.out.print(" "+arr[j]);
+            }
+        
+    }
+
+    //12. Write a Java program to find the duplicate values of an array of integer values.
+    static int i,j;
+    public static void duplicate(int arr[],int value){
+        // 
+        for( i =0; i<=arr.length-1; i++){
+            for(j= i+1; j<=arr.length-1;j++){
+                if(arr[i]==arr[j] ) {
+                    System.out.println("First approch :"+arr[j] + " ");
+                    }
+                }
+            }
+            System.out.println("----------------------");
+ 
+            Arrays.sort(arr);
+            System.out.println("Sorted Arrays : " +Arrays.toString(arr));
+            for(i=0; i< arr.length-1;i++){
+                if(arr[i] == arr[i+1]){
+                    System.out.println("Second Approch :"+arr[i]+" ");
+                }
+            }
+        }
 
     
     
 
     public static void main(String [] args){
-        int z[] = {1,5,220,7,5,2,5,98,55,44,0};
+        int z[] = {1,5,220,7,5,2,5,98,55,44,0,2,7};
+        int b[] = {1,7,8,7,2,4,9,2};
         int target = 44;
         int newValue = 2;
-
+        
+       
+       //duplicate(z,5);
+        // reverse(z);
         //System.out.println(maxValue(z));
        // System.out.println(minValue(z));
 
